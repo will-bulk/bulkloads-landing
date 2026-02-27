@@ -106,24 +106,15 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* COMPANY LOGOS BAR */}
-      <section className="bg-[#0d1f3c] py-8 border-y border-gray-700/50">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-6">
-            {companies.map((c) => (
-              <div key={c.name} className="opacity-70 hover:opacity-100 transition-opacity">
-                <Image src={c.img} alt={c.name} width={100} height={40} className="h-8 w-auto brightness-200" />
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-8">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <div className="text-2xl font-bold text-[#4CAF50]">{s.val}</div>
-                <div className="text-sm text-gray-400">{s.label}</div>
-              </div>
-            ))}
-          </div>
+      {/* SOCIAL PROOF BAR */}
+      <section className="bg-[#0d1f3c] py-6 border-y border-gray-700/50">
+        <div className="flex flex-wrap justify-center gap-8 px-4 max-w-3xl mx-auto">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <div className="text-2xl font-bold text-[#4CAF50]">{s.val}</div>
+              <div className="text-sm text-gray-400">{s.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
